@@ -1,0 +1,5 @@
+# m h dom mon dow user  command
+# SSA
+30 0   * * *   qsadmin /usr/local/qs-project/soc/cron/ssa_score_system.sh
+45 *   * * *   qsadmin /usr/local/qs-project/soc/cron/ssa_alarm.sh
+* *   * * *   qsadmin /usr/local/qs-project/soc/cron/ssa_make_report.sh

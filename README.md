@@ -1,1 +1,4 @@
-# 外包项目：网络安全日志采集及威胁风险分析SOC
+# sec_event
+
+# celery
+celery -A soc worker -B -l info

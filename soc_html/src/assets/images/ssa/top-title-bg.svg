@@ -1,0 +1,69 @@
+<svg id="全局按钮" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="267" height="135" viewBox="0 0 267 135">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #004bc8;
+        fill-opacity: 0.46;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #80f8ff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+
+      .cls-3 {
+        fill: #80f8ff;
+      }
+    </style>
+    <filter id="filter" x="829" y="18" width="267" height="135" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="16.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#40c7ff" flood-opacity="0.28"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="矩形_13" data-name="矩形 13" class="cls-1" d="M877,66h163.46l6.54,7V99l-7.14,5H883.714L877,98V66Z" transform="translate(-829 -18)"/>
+  <path id="矩形_13_拷贝" data-name="矩形 13 拷贝" class="cls-2" d="M877,66h163.46l6.54,7V99l-7.14,5H883.714L877,98V66Z" transform="translate(-829 -18)"/>
+  <path id="矩形_16" data-name="矩形 16" class="cls-3" d="M1038,63H980l-8,3h70Z" transform="translate(-829 -18)"/>
+  <path id="形状_237" data-name="形状 237" class="cls-3" d="M874,86l3-4V96l8,8h13l-5,3H883l-9-9V86Z" transform="translate(-829 -18)"/>
+</svg>

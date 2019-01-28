@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <style>
+    body{
+        color:#fff;
+        padding:0; margin:0;
+        width:100%; height:100%;}
+
+   @font-face{
+      font-family:'ys';
+      src:url('{{static_dir}}/fonts/ys.eot');
+      src:url('{{static_dir}}/fonts/ys.eot') format('embedded-opentype'),
+      url('{{static_dir}}/fonts/ys.woff2') format('woff2'),
+      url('{{static_dir}}/fonts/ys.woff') format('woff'),
+      url('{{static_dir}}/fonts/ys.ttf') format('truetype'),
+      url('{{static_dir}}/fonts/ys.svg') format('svg');
+      font-weight:normal;
+      font-style:normal;
+    }
+    .pd10{ padding:10px; }
+    .m-t-5{ margin-top:5px; }
+    .m-t-10{ margin-top:10px; }
+    .m-r-3{ margin-right:3px; }
+    .m-r-5{ margin-right:5px; }
+    .main{ width:100%; height:100%; background: #3e4d79; }
+    .icon-title:before{ font-family:ys; content:"\E83E"; font-size:.75rem; color:#4a92ff; font-style:normal; }
+    .font12{ font-size:0.75rem; }
+    .font14{ font-size:0.875rem; }
+    .ys-box-title{ height:40px; line-height:40px; padding:0 15px; background:rgba(0, 0, 0, 0.3) }
+    .ys-box-con{ padding:15px; background:rgba(0, 0, 0, 0.15) }
+    .ys-primary-color{ color:#4a92ff !important; }
+    .ys-info-color{ color:#93a6d8 !important; }
+    .levelColor.l1{ color:rgb(74, 146, 255); }
+    .levelColor.l2{ color:rgb(0, 189, 133); }
+    .levelColor.l3{ color:rgb(218, 187, 97); }
+    .levelColor.l4{ color:rgb(233, 97, 87); }
+    .bigTable{ width:100%; }
+    .bigTable tr td{ padding:10px; text-align:left; }
+    .bigTable tr input{ width:220px; }
+    .bigTable tr textarea{ width:100%; min-width:220px; }
+    .bigTable tr:first-child td{ padding-top:0 }
+    .bigTable tr:last-child td{ padding-bottom:0 }
+    .bigTable tr td:nth-child(odd){ width:1%; white-space:nowrap; }
+    .bigTable tr td:first-child{ padding-left:0; white-space:nowrap; word-break:keep-all; text-wrap:none; }
+    .bigTable tr td:last-child{ padding-right:0; }
+    .tableUl{ display:table; width:100%; padding:0; }
+    .tableUl li{ display:table-row; height:40px; }
+    .tableUl li.th{ }
+    .tableUl li.th p{ text-align:center; background:rgba(0, 0, 0, 0.3); }
+    .tableUl li p{ padding:2px 10px; display:table-cell; vertical-align:middle; text-align:center; background:rgba(0, 0, 0, 0.1); }
+    .tableUl li p:first-child{ text-align:center; width:4em; }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="ys-box pd10 font12">
+    <div class="ys-box-title">处理预案详情</div>
+    <div class="ys-box-con">
+      <p>
+        <i class="ys-icon icon-title m-r-5 ys-primary-color"></i><span>{{ title }}</span>
+      </p>
+      <div class="ys-box-con m-t-10">
+        <table class="bigTable">
+          <tr>
+            <td class="ys-info-color">添加人:</td>
+            <td>{{ user }}</td>
+            <td class="ys-info-color">预案等级:</td>
+              {% if level == 1 %}
+            <td class="levelColor l1">{{level}}级</td>
+           {% elif level == 2 %}
+            <td class="levelColor l2">{{level}}级</td>
+           {% elif level == 3 %}
+            <td class="levelColor l3">{{level}}级</td>
+           {% else %}
+            <td class="levelColor l4">{{level}}级</td>
+           {% endif %}
+          </tr>
+          <tr>
+            <td class="ys-info-color">编辑时间:</td>
+            <td>{{ update_time }}</td>
+            <td class="ys-info-color">应用场景:</td>
+            <td> {{ scene }}</td>
+          </tr>
+          <tr>
+            <td class="ys-info-color">TAG标签:</td>
+            <td>{{ tag }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <p class="m-t-20">
+        <i class="ys-icon icon-title m-r-5 ys-primary-color"></i><span>预案简介</span>
+      </p>
+      <div class="m-t-10 ys-box-con">{{ brief|safe }}</div>
+      <p class="m-t-20">
+        <i class="ys-icon icon-title m-r-5 ys-primary-color"></i><span>详细内容</span>
+      </p>
+      <div class="m-t-10 ys-box-con">{{ description|safe }}</div>
+      <p class="m-t-20">
+        <i class="ys-icon icon-title m-r-5 ys-primary-color"></i><span>相关联系人</span>
+      </p>
+      <ul class="m-t-10 tableUl">
+        <li class="th">
+          <p></p>
+          <p>联系人</p>
+          <p>电  话</p>
+          <p>邮  箱</p>
+        </li>
+          {% for i in contacts %}
+              <li>
+          <p>{{forloop.counter}}</p>
+          <p>{{ i.name }}</p>
+          <p>{{ i.phone }}</p>
+          <p>{{ i.email }}</p>
+            </li>
+         {% empty %}
+        <li>
+          <p>1</p>
+          <p>--</p>
+          <p>--</p>
+          <p>--</p>
+        </li>
+          {% endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

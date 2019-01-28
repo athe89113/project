@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <style>
+      body{font-size: 16px;}
+
+      .ys-box-title {
+          font-weight: bold; margin: 0 auto;
+      }
+      h3 {
+          background: cornflowerblue; margin: 16px 0; padding-top: 10px;
+      }
+      .levelColor.l1 {
+        color: green;
+      }
+      .levelColor.l2 {
+        color: yellow;
+      }
+      .levelColor.l3 {
+        color: orange;
+      }
+      .levelColor.l4 {
+        color: red;
+      }
+      .contactTable th {
+          text-align: left;
+
+      }
+      .ys-box-con {
+         text-align: left;
+         white-space: normal !important;
+         word-break: break-all;
+         word-wrap: break-word;
+         width: 480px;
+      }
+      .brief {
+       height: 600px;
+      }
+      img {
+         width: 480px;
+      }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="ys-box pd10 font12">
+    <div class="ys-box-title">处理预案详情</div>
+    <div class="ys-box-con">
+      <h3>预案: {{title}}</h3>
+      <div class="ys-box-con m-t-10">
+        <table class="bigTable">
+          <tr>
+            <td class="ys-info-color">添加人:</td>
+            <td>{{user}}</td>
+            <td class="ys-info-color">预案等级:</td>
+           {% if level == 1 %}
+            <td class="levelColor l1">{{level}}级</td>
+           {% elif level == 2 %}
+            <td class="levelColor l2">{{level}}级</td>
+           {% elif level == 3 %}
+            <td class="levelColor l3">{{level}}级</td>
+           {% else %}
+            <td class="levelColor l4">{{level}}级</td>
+           {% endif %}
+          </tr>
+          <tr>
+            <td class="ys-info-color">编辑时间:</td>
+            <td>{{update_time}}</td>
+            <td class="ys-info-color">应用场景:</td>
+            <td>{{scene}}</td>
+          </tr>
+          <tr>
+            <td class="ys-info-color">标 签:</td>
+            <td>{{tag}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+        <h3>预案简介</h3>
+
+      <div class="m-t-10 ys-box-con brief">
+         {{brief}}
+      </div>
+
+        <h3>详细内容</h3>
+
+      <div class="m-t-10 ys-box-con"> {{description|safe}}</div>
+
+        <h3>相关联系人</h3>
+
+     <div>
+          <table class="contactTable">
+          <tr>
+            <th class="">管理员</th>
+            <th class="">电 话</th>
+            <th class="">邮 箱</th>
+          </tr>
+          {% for i in contacts %}
+          <tr>
+            <td class="">{{i.name}}</td>
+            <td>{{i.phone}}</td>
+            <td class="">{{i.email}}</td>
+          </tr>
+         {% endfor%}
+        </table>
+
+     </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
