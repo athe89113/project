@@ -23,7 +23,7 @@ django-rest-swagger==0.3.4
 djangorestframework==3.1.0
 docxtpl==0.5.0
 dwebsocket==0.4.2
-ecdsa==0.13
+ecdsa==0.13.3
 elasticsearch==2.2.0
 enum34==1.1.6
 Fabric==1.10.1
