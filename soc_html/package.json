@@ -56,7 +56,7 @@
     "function-bind": "^1.0.2",
     "highlight.js": "^9.9.0",
     "html-webpack-plugin": "^2.8.1",
-    "http-proxy": "^1.13.2",
+    "http-proxy": "^1.18.1",
     "imports-loader": "^0.6.5",
     "inject-loader": "^2.0.1",
     "ion-rangeslider": "^2.1.4",
