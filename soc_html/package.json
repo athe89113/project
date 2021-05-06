@@ -18,7 +18,7 @@
     "datatables.net-bs": "^1.10.11",
     "echarts": "^4.0.4",
     "eonasdan-bootstrap-datetimepicker": "^4.15.35",
-    "highcharts": "^6.0.3",
+    "highcharts": "^9.0.0",
     "jquery": "^2.2.0",
     "moment": "^2.8.4",
     "popper.js": "^0.6.4",
