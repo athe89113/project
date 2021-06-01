@@ -91,7 +91,7 @@ six==1.11.0
 tabulate==0.8.2
 text-unidecode==1.2
 typing==3.6.4
-urllib3==1.23
+urllib3==1.26.5
 vine==1.1.4
 wrapt==1.10.11
 xlwt==0.7.5
