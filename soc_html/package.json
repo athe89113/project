@@ -20,7 +20,7 @@
     "eonasdan-bootstrap-datetimepicker": "^4.15.35",
     "highcharts": "^6.0.3",
     "jquery": "^2.2.0",
-    "moment": "^2.8.4",
+    "moment": "^2.29.4",
     "popper.js": "^0.6.4",
     "select2": "^4.0.3",
     "sweetalert": "^1.1.3",
