@@ -11,7 +11,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "better-echarts-maps": "0.0.3",
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^3.4.1",
     "bootstrap-webpack": "0.0.5",
     "collect.js": "^4.0.1",
     "datatables.net": "^1.10.11",
